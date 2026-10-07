@@ -137,6 +137,7 @@ impl KernelSrc {
 		println!("cargo:rerun-if-env-changed=HERMIT_MASK");
 		println!("cargo:rerun-if-env-changed=HERMIT_MRG_RXBUF_SIZE");
 		println!("cargo:rerun-if-env-changed=HERMIT_MTU");
+		println!("cargo:rerun-if-env-changed=HERMIT_SOCKET_BUF_SIZE");
 		println!("cargo:rerun-if-env-changed=NO_COLOR");
 		println!("cargo:rerun-if-env-changed=UHYVE_MOUNT");
 	}

@@ -132,12 +132,14 @@ impl KernelSrc {
 		println!("cargo:rerun-if-env-changed=HERMIT_DNS2");
 		println!("cargo:rerun-if-env-changed=HERMIT_GATEWAY");
 		println!("cargo:rerun-if-env-changed=HERMIT_IP");
+		println!("cargo:rerun-if-env-changed=HERMIT_IPI_SEND_BENCH_ROUNDS");
 		println!("cargo:rerun-if-env-changed=HERMIT_LOG_LEVEL_FILTER");
 		println!("cargo:rerun-if-env-changed=HERMIT_MANIFEST_DIR");
 		println!("cargo:rerun-if-env-changed=HERMIT_MASK");
 		println!("cargo:rerun-if-env-changed=HERMIT_MRG_RXBUF_SIZE");
 		println!("cargo:rerun-if-env-changed=HERMIT_MTU");
 		println!("cargo:rerun-if-env-changed=HERMIT_SOCKET_BUF_SIZE");
+		println!("cargo:rerun-if-env-changed=HERMIT_TIMER_ARM_BENCH_ROUNDS");
 		println!("cargo:rerun-if-env-changed=NO_COLOR");
 		println!("cargo:rerun-if-env-changed=UHYVE_MOUNT");
 	}

@@ -55,7 +55,7 @@ fn run_send_rounds(
 ) {
 	send_rounds(warmup, n_bytes, false, &mut send_round);
 	println!("Warmup done!");
-	send_rounds(n_rounds, n_bytes, true, &mut send_round);
+	send_rounds(n_rounds, n_bytes, false, &mut send_round);
 }
 
 fn run_receive_rounds(
@@ -66,7 +66,7 @@ fn run_receive_rounds(
 ) -> Vec<f64> {
 	let _ = receive_rounds(warmup, n_bytes, false, &mut receive_round);
 	println!("Warmup done!");
-	receive_rounds(n_rounds, n_bytes, true, &mut receive_round)
+	receive_rounds(n_rounds, n_bytes, false, &mut receive_round)
 }
 
 pub enum BwClient {

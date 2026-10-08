@@ -108,11 +108,9 @@ impl LatencyClient {
 		}
 	}
 
-	fn progress_interval(&self, n_rounds: usize) -> usize {
-		match self {
-			Self::Tcp { .. } => n_rounds / 100,
-			Self::Udp { .. } => (n_rounds * 2) / 100,
-		}
+	fn progress_interval(&self, _n_rounds: usize) -> usize {
+		// 0 disables the progress output during the measured rounds
+		0
 	}
 
 	fn exchange(&mut self) -> std::time::Duration {
